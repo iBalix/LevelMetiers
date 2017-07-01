@@ -1,0 +1,11 @@
+name: LevelMetiers
+main: fr.ng.ibalix.levelmetiers.LevelMetiers
+version: 1.0
+author: iBalix
+commands:
+   upgrade:
+      description: Commande pour passer de grade
+      usage: /upgrade
+   levelmetiersreload:
+      description: Commande pour passer de grade
+      usage: /levelmetiersreload reload
