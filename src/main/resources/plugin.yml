@@ -9,3 +9,6 @@ commands:
    levelmetiersreload:
       description: Commande pour passer de grade
       usage: /levelmetiersreload reload
+   join:
+      description: Commande pour changer de grade
+      usage: /join <metier>

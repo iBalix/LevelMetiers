@@ -49,9 +49,11 @@ public class LevelMetiersCommandExecutor implements CommandExecutor {
 				Player player = (Player) sender;	
 				if(!player.isOp()) {
 					
-					String metier = getMetier(player);					
-					if(metier != null) {
-						
+					String metier = getMetier(player);
+					
+					if(metier.equals("aucun")) {
+						player.sendMessage(ChatColor.RED + "Vous n'avez pas de métiers !");
+					} else {						
 						int level = getLevel(player, metier);
 						
 						doUpgrade(player, metier, level);
@@ -61,11 +63,73 @@ public class LevelMetiersCommandExecutor implements CommandExecutor {
 				}
 			}
 			return true;
+			// RELOAD
 		} else if(cmd.getName().equalsIgnoreCase("levelmetiersreload")) {
-			sender.sendMessage(ChatColor.GREEN + "La config a bien été reload !");
+			sender.sendMessage(ChatColor.GREEN + "La config a bien été reload !!");
 			p.reloadConfig();
 			return true;
+			// JOINMETIER
+		} else if(cmd.getName().equalsIgnoreCase("join")) {
+			if(sender instanceof Player) {
+				Player player = (Player) sender;
+				if(!player.isOp()) {
+					if(args.length > 0) {
+						String metierActuel = getMetier(player);						
+						String metierNew = args[0];	
+						
+						if(!metierActuel.equals("aucun")) {
+							if(!metierActuel.equals(metierNew)) {
+								if(getLevel(player, metierActuel) >= 3) {
+									doChange(player, metierActuel, metierNew);
+								} else {
+									player.sendMessage(ChatColor.RED + "Vous devez atteindre le niveau 3 de votre métier actuel pour changer de métier !");
+								}
+							} else {
+								player.sendMessage(ChatColor.RED + "Vous êtes déjà un "+metierActuel);
+							}
+						} else {	
+							p.permission.playerAddGroup(player, metierNew);
+							player.sendMessage(ChatColor.GREEN + "Vous êtes maintenant un "+metierNew);
+						}
+					} else {
+						player.sendMessage(ChatColor.RED + "Précisez le métier que vous souhaitez acquérir, exemple: /jobchange mineur");
+					}
+				} else {
+					player.sendMessage(ChatColor.RED + "Les OPs ne peuvent pas executer cette commande !");
+				}
+			}
+			return true;
 		}		
+		return false;
+	} 
+
+	private void doChange(Player player, String metierActuel, String metierNew) {
+		
+		if(existMetier(metierNew)) {		
+			p.permission.playerRemoveGroup(player, metierActuel);
+			
+			int level = getLevel(player, metierNew);
+			
+			if(level > 1) {
+				p.permission.playerAddGroup(player, metierNew + level);
+				player.sendMessage(ChatColor.GREEN + "Vous êtes maintenant un "+metierNew+" de niveau "+level);
+			} else {
+				p.permission.playerAddGroup(player, metierNew);
+				player.sendMessage(ChatColor.GREEN + "Vous êtes maintenant un "+metierNew);
+			}
+		} else {
+			player.sendMessage(ChatColor.RED + "Ce métier n'existe pas !");
+		}
+	}
+
+	private boolean existMetier(String metierNew) {
+		Set<String> metiers = p.getConfig().getConfigurationSection("metiers").getKeys(false);
+		
+		for(String metier : metiers) {
+			if(metier.toLowerCase().equals(metierNew.toLowerCase())) {	
+				return true;
+			}
+		}
 		return false;
 	}
 
@@ -125,7 +189,13 @@ public class LevelMetiersCommandExecutor implements CommandExecutor {
 				p.permission.playerAddGroup(player, metier+levelUp+"");
 				p.permission.playerAdd(player, "levelmetiers."+metier+"."+levelUp);
 				
-				int montant = level * 2000;
+				int montant = 0;
+				
+				if(player.hasPermission("levelmetiers.elite")) {
+					montant = level * 1000;
+				} else {
+					montant = level * 500;
+				}
 				double montantDouble = Double.parseDouble(montant + "");
 				EconomyResponse r = p.econ.depositPlayer(player.getName(), montantDouble);
 	            if(r.transactionSuccess()) {
@@ -169,13 +239,11 @@ public class LevelMetiersCommandExecutor implements CommandExecutor {
 	private String getMetier(Player player) {
 		Set<String> metiers = p.getConfig().getConfigurationSection("metiers").getKeys(false);
 		
-		for(String metier : metiers) {
+		for(String metier : metiers) {	
 			if(player.hasPermission("levelmetiers."+metier)) {	
 				return metier;
 			}
-		}
-		
-		player.sendMessage(ChatColor.RED + "Vous n'avez pas de métiers !");			
-		return null;
+		}			
+		return "aucun";
 	}
 }

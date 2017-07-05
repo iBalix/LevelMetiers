@@ -29,6 +29,7 @@ public class LevelMetiers extends JavaPlugin {
 		// Initialisation des Commandes
 		this.getCommand("upgrade").setExecutor(new LevelMetiersCommandExecutor(this));
 		this.getCommand("levelmetiersreload").setExecutor(new LevelMetiersCommandExecutor(this));
+		this.getCommand("join").setExecutor(new LevelMetiersCommandExecutor(this));
 	}
 	
 	// Activation du plugin	
