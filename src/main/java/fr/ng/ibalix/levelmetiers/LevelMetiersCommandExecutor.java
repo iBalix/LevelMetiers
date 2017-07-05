@@ -92,7 +92,7 @@ public class LevelMetiersCommandExecutor implements CommandExecutor {
 							player.sendMessage(ChatColor.GREEN + "Vous êtes maintenant un "+metierNew);
 						}
 					} else {
-						player.sendMessage(ChatColor.RED + "Précisez le métier que vous souhaitez acquérir, exemple: /jobchange mineur");
+						player.sendMessage(ChatColor.RED + "Précisez le métier que vous souhaitez acquérir, exemple: /join mineur");
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "Les OPs ne peuvent pas executer cette commande !");
@@ -105,8 +105,11 @@ public class LevelMetiersCommandExecutor implements CommandExecutor {
 
 	private void doChange(Player player, String metierActuel, String metierNew) {
 		
-		if(existMetier(metierNew)) {		
-			p.permission.playerRemoveGroup(player, metierActuel);
+		if(existMetier(metierNew)) {
+			
+			int levelOld = getLevel(player, metierActuel);
+			
+			p.permission.playerRemoveGroup(player, metierActuel+levelOld);
 			
 			int level = getLevel(player, metierNew);
 			
@@ -186,15 +189,12 @@ public class LevelMetiersCommandExecutor implements CommandExecutor {
 				}				
 				output += ChatColor.DARK_GREEN + "Félicitations vous passez au niveau "+levelUp+" !\n";
 				
-				p.permission.playerAddGroup(player, metier+levelUp+"");
-				p.permission.playerAdd(player, "levelmetiers."+metier+"."+levelUp);
-				
 				int montant = 0;
 				
 				if(player.hasPermission("levelmetiers.elite")) {
-					montant = level * 1000;
+					montant = levelUp * 1000;
 				} else {
-					montant = level * 500;
+					montant = levelUp * 500;
 				}
 				double montantDouble = Double.parseDouble(montant + "");
 				EconomyResponse r = p.econ.depositPlayer(player.getName(), montantDouble);
@@ -207,7 +207,11 @@ public class LevelMetiersCommandExecutor implements CommandExecutor {
 				if(level != 1) {
 					p.permission.playerRemoveGroup(player, metier);
 					p.permission.playerRemove(player, "levelmetiers."+metier+"."+level);
-				}
+				}	
+				
+				p.permission.playerAddGroup(player, metier+levelUp+"");
+				p.permission.playerAdd(player, "levelmetiers."+metier+"."+levelUp);
+				
 			} else {
 				output += ChatColor.DARK_RED + "Il vous manque encore des ressources !";
 			}
