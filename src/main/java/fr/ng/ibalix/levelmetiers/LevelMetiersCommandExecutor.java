@@ -48,15 +48,21 @@ public class LevelMetiersCommandExecutor implements CommandExecutor {
 			if(sender instanceof Player) {
 				Player player = (Player) sender;	
 				if(!player.isOp()) {
-					
-					String metier = getMetier(player);
-					
-					if(metier.equals("aucun")) {
-						player.sendMessage(ChatColor.RED + "Vous n'avez pas de métiers !");
-					} else {						
-						int level = getLevel(player, metier);
+					if(args.length > 0) {
 						
-						doUpgrade(player, metier, level);
+						String metierArg = args[0];
+						
+						if(hasMetier(player, metierArg)) {
+							String metier = metierArg;
+							
+							int level = getLevel(player, metier);
+							
+							doUpgrade(player, metier, level);
+						} else {
+							player.sendMessage(ChatColor.RED + "Vous n'avez pas ce métier !");
+						}
+					} else {
+						player.sendMessage(ChatColor.RED + "Précisez le métier que vous souhaitez upgrade, exemple: /upgrade mineur");
 					}
 				} else {
 					player.sendMessage(ChatColor.RED + "Les OPs ne peuvent pas executer cette commande !");
@@ -68,7 +74,7 @@ public class LevelMetiersCommandExecutor implements CommandExecutor {
 			sender.sendMessage(ChatColor.GREEN + "La config a bien été reload !!");
 			p.reloadConfig();
 			return true;
-			// JOINMETIER
+			// JOIN
 		} else if(cmd.getName().equalsIgnoreCase("join")) {
 			if(sender instanceof Player) {
 				Player player = (Player) sender;
@@ -103,13 +109,36 @@ public class LevelMetiersCommandExecutor implements CommandExecutor {
 		return false;
 	} 
 
+	private boolean hasMetier(Player player, String metierArg) {
+		if(existMetier(metierArg.toLowerCase())) {
+			Set<String> levels = p.getConfig().getConfigurationSection("metiers."+metierArg).getKeys(false);
+			
+			if(p.permission.playerInGroup(player, metierArg)) {
+				return true;
+			}
+			
+			for(String level : levels) {
+				if(p.permission.playerInGroup(player, metierArg+level)) {
+					return true;
+				}
+			}
+			return false;
+		} else {
+			return false;
+		}
+	}
+
 	private void doChange(Player player, String metierActuel, String metierNew) {
 		
 		if(existMetier(metierNew)) {
 			
 			int levelOld = getLevel(player, metierActuel);
 			
-			p.permission.playerRemoveGroup(player, metierActuel+levelOld);
+			if(player.hasPermission("levelmetiers.elite") && levelOld == 5) {
+				player.sendMessage(ChatColor.GOLD + "Grâce à votre grade Elite vous conservez vos métier de niveau 5 !");
+			} else {
+				p.permission.playerRemoveGroup(player, metierActuel+levelOld);
+			}
 			
 			int level = getLevel(player, metierNew);
 			
@@ -205,9 +234,11 @@ public class LevelMetiersCommandExecutor implements CommandExecutor {
 	            }
 				
 				if(level != 1) {
-					p.permission.playerRemoveGroup(player, metier);
+					p.permission.playerRemoveGroup(player, metier+level);
 					p.permission.playerRemove(player, "levelmetiers."+metier+"."+level);
-				}	
+				} else {
+					p.permission.playerRemoveGroup(player, metier);
+				}
 				
 				p.permission.playerAddGroup(player, metier+levelUp+"");
 				p.permission.playerAdd(player, "levelmetiers."+metier+"."+levelUp);
