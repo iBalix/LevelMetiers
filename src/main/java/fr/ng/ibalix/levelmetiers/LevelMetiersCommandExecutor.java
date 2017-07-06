@@ -84,7 +84,7 @@ public class LevelMetiersCommandExecutor implements CommandExecutor {
 						String metierNew = args[0];	
 						
 						if(!metierActuel.equals("aucun")) {
-							if(!metierActuel.equals(metierNew)) {
+							if(!hasMetier(player, metierNew)) {
 								if(getLevel(player, metierActuel) >= 3) {
 									doChange(player, metierActuel, metierNew);
 								} else {
