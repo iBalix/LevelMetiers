@@ -1,93 +1,448 @@
 metiers:
   mineur:
     '2':
-      - '1:0:1'
-      - '2:0:1'
+      - '27217:0:15:Fire Element'
+      - '27216:0:15:Water Element'
+      - '27215:0:15:Earth Element'
     '3':
-      - '1:0:1'
-      - '2:0:1'
+      - '27217:0:10:Fire Element'
+      - '27216:0:10:Water Element'
+      - '27215:0:10:Earth Element'
+      - '27218:0:15:Air Element'
+      - '27210:0:10:Crystal'
+      - '27226:0:5:Sapphire'
     '4':
-      - '1:0:1'
-      - '2:0:1'
+      - '27217:0:20:Fire Element'
+      - '27216:0:20:Water Element'
+      - '27215:0:20:Earth Element'
+      - '27210:0:15:Crystal'
+      - '27226:0:8:Sapphire'
+      - '27229:0:15:Bronze Ingot'
     '5':
-      - '1:0:1'
-      - '2:0:1'
+      - '27217:0:30:Fire Element'
+      - '27216:0:30:Water Element'
+      - '27215:0:30:Earth Element'
+      - '27218:0:30:Air Element'
+      - '27226:0:25:Sapphire'
+      - '27227:0:25:Ruby'
+      - '27229:0:20:Bronze Ingot'
+      - '27210:0:15:Crystal'
   bucheron:
     '2':
-      - '1:0:6'
-      - '2:0:1'
+      - '26973:0:20:Coin'
+      - '27186:0:10:Nature Spell'
     '3':
-      - '2:0:6'
-      - '3:0:1'
-      - '2804:13:1:Test Chisel'
+      - '26973:0:30:Coin'
+      - '27186:0:15:Nature Spell'
+      - '27239:0:10:Statuette'
     '4':
-      - '1:0:1'
-      - '2:0:1'
+      - '26973:0:40:Coin'
+      - '27186:0:15:Nature Spell'
+      - '27239:0:10:Statuette'
+      - '27240:0:5:Tablet'
+      - '27208:0:20:Satchel'
     '5':
-      - '1:0:1'
-      - '2:0:1'
+      - '26973:0:40:Coin'
+      - '27186:0:15:Nature Spell'
+      - '27239:0:10:Statuette'
+      - '27240:0:5:Tablet'
+      - '27208:0:25:Satchel'
+      - '1819:0:10:Wooden Shaft'
   chasseur:
     '2':
-      - '1:0:1'
-      - '2:0:1'
+      - '383:90:15:Oeuf de Cochon'
+      - '383:92:15:Oeuf de Vache'
+      - '383:93:15:Oeuf de Poulet'
     '3':
-      - '1:0:1'
-      - '2:0:1'
+      - '383:92:20:Oeuf de Vache'
+      - '383:93:20:Oeuf de Poulet'
+      - '383:52:10:Oeuf de Spider'
+      - '383:91:20:Oeuf de Mouton'
+      - '383:94:10:Oeuf de Poulpe'
     '4':
-      - '1:0:1'
-      - '2:0:1'
+      - '383:92:30:Oeuf de Vache'
+      - '383:93:30:Oeuf de Poulet'
+      - '383:52:15:Oeuf de Spider'
+      - '383:91:30:Oeuf de Mouton'
+      - '383:94:10:Oeuf de Poulpe'
+      - '383:100:1:Oeuf de Cheval'
     '5':
-      - '1:0:1'
-      - '2:0:1'
+      - '383:92:50:Oeuf de Vache'
+      - '383:93:50:Oeuf de Poulet'
+      - '383:52:20:Oeuf de Spider'
+      - '383:91:50:Oeuf de Mouton'
+      - '383:94:20:Oeuf de Poulpe'
+      - '383:98:10:Oeuf de Ocelot'
+      - '383:100:5:Oeuf de Cheval'
+  agriculteur:
+    '2':
+      - '27195:0:40:BrokenOrb White'
+      - '27195:4:40:BrokenOrb Yellow'
+    '3':
+      - '27195:0:40:BrokenOrb White'
+      - '27195:4:40:BrokenOrb Yellow'
+      - '27193:14:35:Orb Rouge'
+      - '27193:14:35:Orb Bleu'
+    '4':
+      - '27193:14:40:Orb Rouge'
+      - '27193:11:40:Orb Bleu'
+      - '27191:0:25:Dark Spell'
+      - '27192:0:25:Holy Spell'
+    '5':
+      - '27191:0:40:Dark Spell'
+      - '27192:0:40:Holy Spell'
+      - '27187:0:25:Arcane Spell'
+      - '27189:0:25:Ice Spell'
   dresseur:
     '2':
-      - '1:0:1'
-      - '2:0:1'
+      - '26006:0:1:Pig bike'
+      - '26007:0:1:Cow bike'
+      - '26010:0:1:Chicken bike'
     '3':
-      - '1:0:1'
-      - '2:0:1'
+      - '26008:0:1:Spider bike'
+      - '26009:0:2:Sheep bike'
+      - '26011:0:1:Wolf bike'
     '4':
-      - '1:0:1'
-      - '2:0:1'
+      - '26031:0:1:Ocelot bike'
+      - '26008:0:1:Spider bike'
+      - '26006:0:1:Pig bike'
+      - '26011:0:1:Wolf bike'
+      - '26010:0:1:Chicken bike'
+      - '26009:0:1:Sheep bike'
     '5':
-      - '1:0:1'
-      - '2:0:1'
+      - '26025:0:1:Chocobo bike'
+      - '26013:0:1:Creeper bike'
+      - '26030:0:1:Slime bike'      
+      - '26031:0:1:Ocelot bike'
+      - '26008:0:1:Spider bike'      
+      - '26006:0:2:Pig bike'
+      - '26009:0:2:Sheep bike'
+      - '26007:0:2:Cow bike'
   ingenieur:
     '2':
-      - '1:0:1'
-      - '2:0:1'
+      - '19483:4:5:Chemical Missile'
+      - '19483:3:5:Debilitation Missile'
+      - '19483:0:5:Conventional Missile'
     '3':
-      - '1:0:1'
-      - '2:0:1'
+      - '19483:8:3:Fragmentation Missile'
+      - '19483:7:5:Attractive Missile'
+      - '19483:0:3:Conventional Missile'
     '4':
-      - '1:0:1'
-      - '2:0:1'
+      - '19483:27:2:Cluster Missile'
+      - '19483:20:1:Ender Missile'
+      - '19483:2:2:Incendiary Missile'
+      - '19483:6:2:Repulsive Missile'
     '5':
-      - '1:0:1'
-      - '2:0:1'
+      - '19483:21:3:Hypersonic Missile'
+      - '19483:15:1:Nuclear Missile'
+      - '19483:13:1:Thermobaric Missile'     
+      - '19483:20:1:Ender Missile'
   policier:
     '2':
-      - '1:0:1'
-      - '2:0:1'
+      - '23842:0:50:Munitions USP.45'
     '3':
-      - '1:0:1'
-      - '2:0:1'
+      - '23814:0:20:Munitions G3'
+      - '23830:0:20:Munitions W1200'
     '4':
-      - '1:0:1'
-      - '2:0:1'
+      - '23814:0:10:Munitions G3'
+      - '23842:0:20:Munitions USP.45'
+      - '23828:0:40:Munitions P90'
     '5':
-      - '1:0:1'
-      - '2:0:1'
+      - '23814:0:10:Munitions G3'
+      - '23838:0:30:Munitions M60E4'
   mafieux:
     '2':
-      - '1:0:1'
-      - '2:0:1'
+      - '23846:0:50:Munitions Desert Eagle'
     '3':
-      - '1:0:1'
-      - '2:0:1'
+      - '23830:0:30:Munitions W1200'
     '4':
-      - '1:0:1'
-      - '2:0:1'
+      - '23812:0:50:Munitions Ak47'
     '5':
-      - '1:0:1'
-      - '2:0:1'
+      - '23838:0:8:Munitions M60E4'
+      - '23836:0:20:Munitions RPD'
+  alchimiste:
+    '2':
+      - '1800:0:5:Potion du petit guerrier'
+      - '1801:0:5:Potion blindée'
+      - '1802:0:5:Potion du récolteur'
+    '3':
+      - '1803:0:5:Potion du constructeur'
+      - '1804:0:5:Potion du grand récolteur'
+      - '1805:0:5:Potion blindée supérieure'
+    '4':
+      - '1807:0:5:Potion du guerrier légendaire'
+      - '1806:0:5:Potion du récolteur véloce'
+      - '1808:0:5:Potion blindée ultime'
+    '5':
+      - '1809:0:5:Potion blindée légendaire'
+      - '1810:0:5:Potion du guerrier épique'
+      - '1811:0:5:Potion du récolteur accompli'
+  forgeron:
+    '2':
+      - '1850:0:1:Casque Reinforced Iron'
+      - '1851:0:1:Torse Reinforced Iron'
+      - '1852:0:1:Pantalon Reinforced Iron'
+      - '1853:0:1:Bottes Reinforced Iron'
+      - '1838:0:1:Casque Reinforced Mythril'
+      - '1839:0:1:Torse Reinforced Mythril'
+      - '1840:0:1:Pantalon Reinforced Mythril'
+      - '1841:0:1:Bottes Reinforced Mythril'
+    '3':
+      - '1850:0:2:Casque Reinforced Iron'
+      - '1851:0:2:Torse Reinforced Iron'
+      - '1852:0:2:Pantalon Reinforced Iron'
+      - '1853:0:2:Bottes Reinforced Iron'
+      - '1838:0:1:Casque Reinforced Mythril'
+      - '1839:0:1:Torse Reinforced Mythril'
+      - '1840:0:1:Pantalon Reinforced Mythril'
+      - '1841:0:1:Bottes Reinforced Mythril'
+      - '1834:0:1:Casque Reinforced Fyrite'
+      - '1835:0:1:Torse Reinforced Fyrite'
+      - '1836:0:1:Pantalon Reinforced Fyrite'
+      - '1837:0:1:Bottes Reinforced Fyrite'
+    '4':
+      - '1834:0:1:Casque Reinforced Fyrite'
+      - '1835:0:1:Torse Reinforced Fyrite'
+      - '1836:0:1:Pantalon Reinforced Fyrite'
+      - '1837:0:1:Bottes Reinforced Fyrite'
+      - '1846:0:2:Casque Reinforced Adamantium'
+      - '1847:0:2:Torse Reinforced Adamantium'
+      - '1848:0:2:Pantalon Reinforced Adamantium'
+      - '1849:0:2:Bottes Reinforced Adamantium'
+      - '1842:0:2:Casque Reinforced Heavy Duty'
+      - '1843:0:2:Torse Reinforced Heavy Duty'
+      - '1844:0:2:Pantalon Reinforced Heavy Duty'
+      - '1845:0:2:Bottes Reinforced Heavy Duty'
+    '5':
+      - '1846:0:1:Casque Reinforced Adamantium'
+      - '1847:0:1:Torse Reinforced Adamantium'
+      - '1848:0:1:Pantalon Reinforced Adamantium'
+      - '1849:0:1:Bottes Reinforced Adamantium'
+      - '1830:0:3:Casque Reinforced Illumenite'
+      - '1831:0:3:Torse Reinforced Illumenite'
+      - '1832:0:3:Pantalon Reinforced Illumenite'
+      - '1833:0:3:Bottes Reinforced Illumenite'
+metierselite:
+  mineur:
+    '2':
+      - '27217:0:12:Fire Element'
+      - '27216:0:12:Water Element'
+      - '27215:0:12:Earth Element'
+    '3':
+      - '27217:0:8:Fire Element'
+      - '27216:0:8:Water Element'
+      - '27215:0:8:Earth Element'
+      - '27218:0:12:Air Element'
+      - '27210:0:8:Crystal'
+      - '27226:0:4:Sapphire'
+    '4':
+      - '27217:0:15:Fire Element'
+      - '27216:0:15:Water Element'
+      - '27215:0:15:Earth Element'
+      - '27210:0:12:Crystal'
+      - '27226:0:6:Sapphire'
+      - '27229:0:12:Bronze Ingot'
+    '5':
+      - '27217:0:25:Fire Element'
+      - '27216:0:25:Water Element'
+      - '27215:0:25:Earth Element'
+      - '27218:0:25:Air Element'
+      - '27226:0:20:Sapphire'
+      - '27227:0:20:Ruby'
+      - '27229:0:15:Bronze Ingot'
+      - '27210:0:12:Crystal'
+  bucheron:
+    '2':
+      - '26973:0:15:Coin'
+      - '27186:0:8:Nature Spell'
+    '3':
+      - '26973:0:25:Coin'
+      - '27186:0:12:Nature Spell'
+      - '27239:0:8:Statuette'
+    '4':
+      - '26973:0:35:Coin'
+      - '27186:0:12:Nature Spell'
+      - '27239:0:8:Statuette'
+      - '27240:0:4:Tablet'
+      - '27208:0:15:Satchel'
+    '5':
+      - '26973:0:35:Coin'
+      - '27186:0:12:Nature Spell'
+      - '27239:0:8:Statuette'
+      - '27240:0:4:Tablet'
+      - '27208:0:20:Satchel'
+      - '1819:0:8:Wooden Shaft'
+  chasseur:
+    '2':
+      - '383:90:12:Oeuf de Cochon'
+      - '383:92:12:Oeuf de Vache'
+      - '383:93:12:Oeuf de Poulet'
+    '3':
+      - '383:92:15:Oeuf de Vache'
+      - '383:93:15:Oeuf de Poulet'
+      - '383:52:8:Oeuf de Spider'
+      - '383:91:15:Oeuf de Mouton'
+      - '383:94:8:Oeuf de Poulpe'
+    '4':
+      - '383:92:25:Oeuf de Vache'
+      - '383:93:25:Oeuf de Poulet'
+      - '383:52:12:Oeuf de Spider'
+      - '383:91:25:Oeuf de Mouton'
+      - '383:94:8:Oeuf de Poulpe'
+      - '383:100:1:Oeuf de Cheval'
+    '5':
+      - '383:92:40:Oeuf de Vache'
+      - '383:93:40:Oeuf de Poulet'
+      - '383:52:15:Oeuf de Spider'
+      - '383:91:40:Oeuf de Mouton'
+      - '383:94:15:Oeuf de Poulpe'
+      - '383:98:8:Oeuf de Ocelot'
+      - '383:100:4:Oeuf de Cheval'
+  agriculteur:
+    '2':
+      - '27195:0:35:BrokenOrb White'
+      - '27195:4:35:BrokenOrb Yellow'
+    '3':
+      - '27195:0:35:BrokenOrb White'
+      - '27195:4:35:BrokenOrb Yellow'
+      - '27193:14:30:Orb Rouge'
+      - '27193:14:30:Orb Bleu'
+    '4':
+      - '27193:14:35:Orb Rouge'
+      - '27193:11:35:Orb Bleu'
+      - '27191:0:20:Dark Spell'
+      - '27192:0:20:Holy Spell'
+    '5':
+      - '27191:0:35:Dark Spell'
+      - '27192:0:35:Holy Spell'
+      - '27187:0:20:Arcane Spell'
+      - '27189:0:20:Ice Spell'
+  dresseur:
+    '2':
+      - '26006:0:1:Pig bike'
+      - '26007:0:1:Cow bike'
+      - '26010:0:1:Chicken bike'
+    '3':
+      - '26008:0:1:Spider bike'
+      - '26009:0:1:Sheep bike'
+      - '26011:0:1:Wolf bike'
+    '4':
+      - '26031:0:1:Ocelot bike'
+      - '26008:0:1:Spider bike'
+      - '26006:0:1:Pig bike'
+      - '26011:0:1:Wolf bike'
+      - '26010:0:1:Chicken bike'
+      - '26009:0:1:Sheep bike'
+    '5':
+      - '26025:0:1:Chocobo bike'
+      - '26013:0:1:Creeper bike'
+      - '26030:0:1:Slime bike'      
+      - '26031:0:1:Ocelot bike'
+      - '26008:0:1:Spider bike'      
+      - '26006:0:1:Pig bike'
+      - '26009:0:1:Sheep bike'
+      - '26007:0:1:Cow bike'
+  ingenieur:
+    '2':
+      - '19483:4:4:Chemical Missile'
+      - '19483:3:4:Debilitation Missile'
+      - '19483:0:4:Conventional Missile'
+    '3':
+      - '19483:8:2:Fragmentation Missile'
+      - '19483:7:4:Attractive Missile'
+      - '19483:0:2:Conventional Missile'
+    '4':
+      - '19483:27:2:Cluster Missile'
+      - '19483:20:1:Ender Missile'
+      - '19483:2:1:Incendiary Missile'
+      - '19483:6:1:Repulsive Missile'
+    '5':
+      - '19483:21:2:Hypersonic Missile'
+      - '19483:15:1:Nuclear Missile'
+      - '19483:13:1:Thermobaric Missile'     
+      - '19483:20:1:Ender Missile'
+  policier:
+    '2':
+      - '23842:0:40:Munitions USP.45'
+    '3':
+      - '23814:0:15:Munitions G3'
+      - '23830:0:15:Munitions W1200'
+    '4':
+      - '23814:0:8:Munitions G3'
+      - '23842:0:15:Munitions USP.45'
+      - '23828:0:35:Munitions P90'
+    '5':
+      - '23814:0:8:Munitions G3'
+      - '23838:0:25:Munitions M60E4'
+  mafieux:
+    '2':
+      - '23846:0:40:Munitions Desert Eagle'
+    '3':
+      - '23830:0:25:Munitions W1200'
+    '4':
+      - '23812:0:40:Munitions Ak47'
+    '5':
+      - '23838:0:7:Munitions M60E4'
+      - '23836:0:15:Munitions RPD'
+  alchimiste:
+    '2':
+      - '1800:0:4:Potion du petit guerrier'
+      - '1801:0:4:Potion blindée'
+      - '1802:0:4:Potion du récolteur'
+    '3':
+      - '1803:0:4:Potion du constructeur'
+      - '1804:0:4:Potion du grand récolteur'
+      - '1805:0:4:Potion blindée supérieure'
+    '4':
+      - '1807:0:4:Potion du guerrier légendaire'
+      - '1806:0:4:Potion du récolteur véloce'
+      - '1808:0:4:Potion blindée ultime'
+    '5':
+      - '1809:0:4:Potion blindée légendaire'
+      - '1810:0:4:Potion du guerrier épique'
+      - '1811:0:4:Potion du récolteur accompli'
+  forgeron:
+    '2':
+      - '1850:0:1:Casque Reinforced Iron'
+      - '1851:0:1:Torse Reinforced Iron'
+      - '1852:0:1:Pantalon Reinforced Iron'
+      - '1853:0:1:Bottes Reinforced Iron'
+      - '1838:0:1:Casque Reinforced Mythril'
+      - '1839:0:1:Torse Reinforced Mythril'
+      - '1840:0:1:Pantalon Reinforced Mythril'
+      - '1841:0:1:Bottes Reinforced Mythril'
+    '3':
+      - '1850:0:2:Casque Reinforced Iron'
+      - '1851:0:1:Torse Reinforced Iron'
+      - '1852:0:1:Pantalon Reinforced Iron'
+      - '1853:0:2:Bottes Reinforced Iron'
+      - '1838:0:1:Casque Reinforced Mythril'
+      - '1839:0:1:Torse Reinforced Mythril'
+      - '1840:0:1:Pantalon Reinforced Mythril'
+      - '1841:0:1:Bottes Reinforced Mythril'
+      - '1834:0:1:Casque Reinforced Fyrite'
+      - '1835:0:1:Torse Reinforced Fyrite'
+      - '1836:0:1:Pantalon Reinforced Fyrite'
+      - '1837:0:1:Bottes Reinforced Fyrite'
+    '4':
+      - '1834:0:1:Casque Reinforced Fyrite'
+      - '1835:0:1:Torse Reinforced Fyrite'
+      - '1836:0:1:Pantalon Reinforced Fyrite'
+      - '1837:0:1:Bottes Reinforced Fyrite'
+      - '1846:0:2:Casque Reinforced Adamantium'
+      - '1847:0:1:Torse Reinforced Adamantium'
+      - '1848:0:1:Pantalon Reinforced Adamantium'
+      - '1849:0:2:Bottes Reinforced Adamantium'
+      - '1842:0:2:Casque Reinforced Heavy Duty'
+      - '1843:0:1:Torse Reinforced Heavy Duty'
+      - '1844:0:1:Pantalon Reinforced Heavy Duty'
+      - '1845:0:2:Bottes Reinforced Heavy Duty'
+    '5':
+      - '1846:0:1:Casque Reinforced Adamantium'
+      - '1847:0:1:Torse Reinforced Adamantium'
+      - '1848:0:1:Pantalon Reinforced Adamantium'
+      - '1849:0:1:Bottes Reinforced Adamantium'
+      - '1830:0:3:Casque Reinforced Illumenite'
+      - '1831:0:2:Torse Reinforced Illumenite'
+      - '1832:0:2:Pantalon Reinforced Illumenite'
+      - '1833:0:3:Bottes Reinforced Illumenite'

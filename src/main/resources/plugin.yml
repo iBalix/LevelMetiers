@@ -5,10 +5,16 @@ author: iBalix
 commands:
    upgrade:
       description: Commande pour passer de grade
-      usage: /upgrade
+      usage: /upgrade <metier>
    levelmetiersreload:
       description: Commande pour passer de grade
       usage: /levelmetiersreload reload
    join:
       description: Commande pour changer de grade
       usage: /join <metier>
+   setelite:
+      description: Commande pour passer elite en transferant les métiers
+      usage: /setelite <pseudo>
+   job:
+      description: Commande pour consulter les ses métiers
+      usage: /job
